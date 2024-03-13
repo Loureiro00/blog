@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @blog_livro %>
+
+<div>
+  <%= link_to "Editar resenha sobre livro", edit_blog_livro_path(@blog_livro) %> |
+  <%= link_to "Voltar para pág inicial", blog_livros_path %>
+
+  <%= button_to "Excluir resenha", @blog_livro, method: :delete %>
+</div>

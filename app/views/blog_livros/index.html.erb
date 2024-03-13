@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Blog livros</h1>
+
+<div id="blog_livros">
+  <% @blog_livros.each do |blog_livro| %>
+    <%= render blog_livro %>
+    <p>
+      <%= link_to "Show this blog livro", blog_livro %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Resenha sobre livro", new_blog_livro_path %>

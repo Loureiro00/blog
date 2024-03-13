@@ -1,0 +1,39 @@
+<%= form_with(model: blog_livro) do |form| %>
+  <% if blog_livro.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(blog_livro.errors.count, "error") %> prohibited this blog_livro from being saved:</h2>
+
+      <ul>
+        <% blog_livro.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :Titulo, style: "display: block" %>
+    <%= form.text_field :tittle %>
+  </div>
+
+  <div>
+    <%= form.label :Autor, style: "display: block" %>
+    <%= form.text_field :author %>
+  </div>
+
+  <div>
+    <%= form.label :Nota_Livro, style: "display: block" %>
+    <%= form.text_field :noteforthebook %>
+  </div>
+
+  <div>
+    <%= form.label :Descrição, style: "display: block" %>
+    <%= form.text_field :description %>
+  </div>
+
+  
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
